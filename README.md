@@ -67,6 +67,7 @@ Running `grunt test` will run the unit tests with karma.
 	* Used inbuilt prototype algorithms like forEach() to make code cleaner
 	* Moved individual section specific routing to individual folders making the routing easier to manage
 	* Used bindings to the controller object rather than the local $scope
+	* TODO : Use Babel to transpile ES6 allowing us to write cleaner code
 	* TODO : For building the app, add ngAnnotate for buildtime DI
 	* Used `controllerAs` alias to refer to the view as is the recommended practice.
 	* TODO : Moving constant declaration into individual declarations under `constants` folder
@@ -85,6 +86,8 @@ Running `grunt test` will run the unit tests with karma.
 ###Tests
 	* Used Karma, Jasmine for writing unit tests
 	* TODO : write e2e tests in protractor
+
+
 
 
 
