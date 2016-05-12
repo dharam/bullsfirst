@@ -1,0 +1,32 @@
+#header {
+    display: flex;
+    background: $orange;
+    padding: 30px 20px;
+
+    .logo {
+        h1 {
+            margin: 3px 0;
+            &.heading {
+            	font-weight : 400;
+            }
+        }
+        .subtitle {            
+            font-style : italic;
+        }
+    }
+
+    .actions {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        color : $white;        
+
+        .strong {
+        	background : $deepred;
+        	height : 7rem;
+        	&:hover {
+	        	color : $off-white;
+	        }
+        }
+    }
+}

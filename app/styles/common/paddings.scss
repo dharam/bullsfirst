@@ -1,0 +1,86 @@
+// bf-padding-top
+
+$padding-list: 0, 5, 10 , 15, 20, 25, 30, 35, 40, 45, 50, 55, 60;
+
+// -------------------------------------------------
+
+// bf-padding
+
+@mixin padding($size) {
+  padding: $size + px;
+}
+
+@mixin bf-padding-x-list {
+  @each $padding-value in $padding-list {
+  .bf-p-#{$padding-value} { @include padding($padding-value); }
+  }
+}
+
+@include bf-padding-x-list ;
+
+// -------------------------------------------------
+
+@mixin padding($size) {
+  padding-top: $size + px;
+}
+
+@mixin bf-padding-top-x-list {
+  @each $padding-value in $padding-list {
+  .bf-p-t-#{$padding-value} { @include padding($padding-value); }
+  }
+}
+
+.bf-text-spaced {
+  letter-spacing : 0.1rem;
+}
+
+@include bf-padding-top-x-list ;
+
+// -------------------------------------------------
+
+// bf-padding-right
+
+@mixin padding($size) {
+  padding-right: $size + px;
+}
+
+@mixin bf-padding-right-x-list {
+  @each $padding-value in $padding-list {
+  .bf-p-r-#{$padding-value} { @include padding($padding-value); }
+  }
+}
+
+@include bf-padding-right-x-list ;
+
+// -------------------------------------------------
+
+// bf-padding-bottom
+
+@mixin padding($size) {
+  padding-bottom: $size + px;
+}
+
+@mixin bf-padding-bottom-x-list {
+  @each $padding-value in $padding-list {
+  .bf-p-b-#{$padding-value} { @include padding($padding-value); }
+  }
+}
+
+@include bf-padding-bottom-x-list ;
+
+// -------------------------------------------------
+
+// bf-padding-left
+
+@mixin padding($size) {
+  padding-left: $size + px;
+}
+
+@mixin bf-padding-left-x-list {
+  @each $padding-value in $padding-list {
+  .bf-p-l-#{$padding-value} { @include padding($padding-value); }
+  }
+}
+
+@include bf-padding-left-x-list ;
+

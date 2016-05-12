@@ -1,0 +1,52 @@
+<div id="content">
+    <div class="left-section">
+        <div class="header">
+            <div class="subheading bf-font-15">Accounts</div>
+
+            <div class="actions bf-font-12">
+                <button ng-click="accounts.addAccount()">
+                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add Account
+                </button>
+                <button><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Refresh</button>
+            </div>
+        </div>
+
+        <table>
+            <tr>
+                <th class="bf-font-12">Name</th>
+                <th class="bf-font-12">Market Value</th>
+                <th class="bf-font-12">Cash</th>
+                <th class="bf-font-12">Legend</th>
+            </tr>
+
+            <tr ng-repeat="row in accounts.rows" class="table-row">
+                <td>{{ row.name }}</td>
+                <td>{{ row.marketValue | currency }}</td>
+                <td>{{ row.cash | currency }}</td>
+                <td>
+                    <div class="legend" style="background-color: {{ row.legend }}"></div>
+                </td>
+            </tr>
+
+            <tr class="totals">
+                <td></td>
+                <td>
+                    <strong>{{ accounts.totals.marketValue | currency }}</strong>
+                </td>
+                <td>
+                    <strong>{{ accounts.totals.cash | currency }}</strong>
+                </td>
+                <td></td>
+            </tr>
+
+
+        </table>
+    </div>
+
+    <div class="right-section">
+        <img class="chart" src="images/accounts/chart.png" alt="Chart">
+
+        <div class="help-label">Click on an account to view positions</div>
+    </div>
+
+</div>

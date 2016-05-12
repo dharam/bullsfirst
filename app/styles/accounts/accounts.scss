@@ -1,0 +1,61 @@
+@import 'common/rollup.scss';
+@import 'accounts/variables.scss';
+/* Left Section */
+.left-section {
+    flex: 1;
+    margin-right: 20px;
+
+    .header {
+        display: flex;
+        height: 30px;        
+
+        button {
+            height: 25px;
+        }
+
+        & > .actions {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            color : $white;
+        }
+    }
+
+    table {
+    	th {
+	        background: $grey;
+	        padding: 5px;
+	        color : $accounts-table-heading;
+	        text-transform : uppercase;
+	        font-weight : normal;
+	    }
+	    tr.table-row {
+	    	border-bottom : solid 1px $table-row-border;
+	    	&:last-child {
+	    		border-bottom : none;
+	    	}
+	    }
+    }
+    .totals td {
+        border-top: 3px solid $grey;
+    }
+
+    .legend {
+        width: 30px;
+        height: 16px;
+    }
+}
+
+/* Right Section */
+.right-section {
+    width: 300px;
+    background: $grey;
+
+    .chart {
+        height: 300px;
+    }
+
+    .help-label {
+        padding: 10px;
+    }
+} 

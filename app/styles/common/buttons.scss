@@ -1,0 +1,9 @@
+button {
+    width: 100px;
+    background: $orange;
+    border: none;
+    margin-right: 10px;
+    &:last-child {
+    	margin-right : 0;
+    }        
+}

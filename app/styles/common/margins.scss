@@ -1,0 +1,80 @@
+/** Autogenerates classes for margin */
+
+$margin-list: 0, 5, 10 , 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70,75, 80, 85, 90, 95, 100, 105, 110, 115;
+@mixin margin($size) {
+  margin-top: $size + px;
+}
+
+@mixin bf-margin-top-x-list {
+  @each $margin-value in $margin-list {
+  .bf-m-t-#{$margin-value} { @include margin($margin-value); }
+  }
+}
+
+@include bf-margin-top-x-list ;
+
+// -------------------------------------------------
+
+// bf-margin-right
+
+@mixin margin($size) {
+  margin-right: $size + px;
+}
+
+@mixin bf-margin-right-x-list {
+  @each $margin-value in $margin-list {
+  .bf-m-r-#{$margin-value} { @include margin($margin-value); }
+  }
+}
+
+@include bf-margin-right-x-list ;
+
+// -------------------------------------------------
+
+// bf-margin-bottom
+
+@mixin margin($size) {
+  margin-bottom: $size + px;
+}
+
+@mixin bf-margin-bottom-x-list {
+  @each $margin-value in $margin-list {
+  .bf-m-b-#{$margin-value} { @include margin($margin-value); }
+  }
+}
+
+@include bf-margin-bottom-x-list ;
+
+// -------------------------------------------------
+
+// bf-margin-left
+
+@mixin margin($size) {
+  margin-left: $size + px;
+}
+
+@mixin bf-margin-left-x-list {
+  @each $margin-value in $margin-list {
+  .bf-m-l-#{$margin-value} { @include margin($margin-value); }
+  }
+}
+
+@include bf-margin-left-x-list ;
+
+// -------------------------------------------------
+
+// bf-margin
+
+@mixin margin($size) {
+  margin: $size + px;
+}
+
+@mixin bf-margin-x-list {
+  @each $margin-value in $margin-list {
+  .bf-m-#{$margin-value} { @include margin($margin-value); }
+  }
+}
+
+@include bf-margin-x-list ;
+
+// -------------------------------------------------

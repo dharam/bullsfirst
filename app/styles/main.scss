@@ -1,0 +1,28 @@
+body {        
+    max-width: 1000px;
+    margin: 0 auto;    
+
+    #content {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    table {
+        width: 100%;
+    }
+    table td {
+        padding: 5px;
+    }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+        border: none;
+    }
+}
+
+/** Import all individual sections styles here */
+@import 'accounts/accounts.scss';
+
+
+

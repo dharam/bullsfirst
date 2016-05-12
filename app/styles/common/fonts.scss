@@ -1,0 +1,27 @@
+/** Auto generates font sizes to be used throughout the app */
+$maxFontSize: 50;
+$baseSize: 10;
+
+/** Returns the rem size */
+@function calculateRem($size) {
+  $remSize: $size / $baseSize;
+  @return #{$remSize}rem;
+}
+
+@mixin font-size($sizeValue) {
+  font-size: calculateRem($sizeValue);
+}
+
+/** Font size generator */
+@mixin bf-font-x-list {
+  @for $i from 10 through $maxFontSize - 1 {
+  .bf-font-#{$i} { @include font-size($i); }
+  }
+}
+
+@include bf-font-x-list;
+
+body {
+	font-family: "Roboto", "Arial", "sans-serif";
+	font-size: 14px;
+}
