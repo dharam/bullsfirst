@@ -13,9 +13,15 @@ Running `grunt test` will run the unit tests with karma.
 
 ##Changes
  
+###Build flow
+	*Used yeoman generator to get the basic scaffolding. It helps reduce time for development
+	*Live reload helped to reload page during development, hence saving time
+	*Grunt tasks take care of compiling scss files into css triggered by file changes. Shall be helpful in CI.
+
 ###HTML
-	Added initial-scale attribute value to the head section with a value of 1.
-	Divided the markup into common views `nav.html` and `accounts.html` for better modularity.
+	*Added initial-scale attribute value to the head section with a value of 1.
+	*Divided the markup into common views `nav.html` and `accounts.html` for better modularity.
+	*Used browserhappy, to prompt users on legacy browsers to upgrade.
 
 ###Directory structure
 	Made the directory structure more managable separating out the concerns from app level to standalone.
