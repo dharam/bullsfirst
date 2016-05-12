@@ -8,7 +8,6 @@ describe('Controller: AccountsController', function () {
   var AccountsController,
     scope;
 
-  // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
     AccountsController = $controller('AccountsController', {
@@ -36,5 +35,13 @@ describe('Controller: AccountsController', function () {
 
   it('should have a list of accounts to the scope', function () {
     expect(AccountsController.rows.length).toBe(3); 
+  });
+
+  it('should calculate the totalMarketValue', function () {
+    expect(AccountsController.totals.marketValue).toBe(5299970); 
+  });
+
+  it('should calculate total Cash', function () {
+    expect(AccountsController.totals.cash).toBe(5287548); 
   });
 });
