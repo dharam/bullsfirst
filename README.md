@@ -63,8 +63,29 @@ Running `grunt test` will run the unit tests with karma.
 ###Code fixes
 	* Encapsulated JS code within an IIFE to avoid polluting global scope
 	* Used 'strict' mode for JS 
-	* Used *jshint* to maintain a standard coding style
-	* 
+	* Used **jshint** to maintain a standard coding style
+	* Used inbuilt prototype algorithms like forEach() to make code cleaner
+	* Moved individual section specific routing to individual folders making the routing easier to manage
+	* Used bindings to the controller object rather than the local $scope
+	* TODO : For building the app, add ngAnnotate for buildtime DI
+	* Used `controllerAs` alias to refer to the view as is the recommended practice.
+	* TODO : Moving constant declaration into individual declarations under `constants` folder
+	* TODO : Creating directives for reusable components
+	* TODO : Create filters for manipulating data
+
+###CSS fixes
+	* Separated CSS into manageable and modular sections
+	* Used auto-generated classes to standardise layout 
+	* Used SASS to make the CSS cleaner and avoid redundancy
+	* Used SASS variables to make theming possible easily
+	* Used Bootstrap SVGs for icons making the page faster
+	* TODO : remove all the hardcoded values existing in the styles and move to variables
+	* TODO : Add bootstrap classes to make the layout responsive on all devices
+
+###Tests
+	* Used Karma, Jasmine for writing unit tests
+	* TODO : write e2e tests in protractor
+
 
 
  
